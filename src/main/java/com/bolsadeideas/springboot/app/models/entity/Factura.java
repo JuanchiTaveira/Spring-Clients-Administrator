@@ -3,6 +3,7 @@ package com.bolsadeideas.springboot.app.models.entity;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ public class Factura implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotEmpty
     private String descripcion;
 
     private String observacion;

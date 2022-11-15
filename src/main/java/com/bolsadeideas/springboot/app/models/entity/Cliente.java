@@ -41,9 +41,6 @@ public class Cliente implements Serializable {
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "cliente")
 	private List<Factura> facturas;
 
-
-
-
 	public Cliente() {
 		facturas = new ArrayList<Factura>();
 	}
@@ -114,4 +111,8 @@ public class Cliente implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	@Override
+	public String toString() {
+		return nombre + " " + apellido;
+	}
 }

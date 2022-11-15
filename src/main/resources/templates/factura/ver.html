@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<body>
+
+<header th:replace="layout/layout :: header"></header>
+
+<div class="container py-4">
+
+    <div class="card bg-light text-dark">
+        <div class="card-header" th:text="${titulo}"></div>
+        <div class="card-body">
+            <h4 class="card-title">
+                <a th:href="@{'/ver/' + ${factura.cliente.id}}" class="btn btn-light btn-xs">&laquo; volver</a>
+            </h4>
+
+            <ul class="list-group my-2">
+                <li th:text="'Datos del cliente'" class="list-group-item list-group-item-primary"></li>
+                <li th:text="${factura.cliente}" class="list-group-item"></li>
+                <li th:text="${factura.cliente.email}" class="list-group-item"></li>
+            </ul>
+
+            <ul class="list-group">
+                <li th:text="'Datos de la factura'" class="list-group-item list-group-item-primary"></li>
+                <li th:utext="|<strong>Folio:</strong> ${factura.id}|" class="list-group-item"></li>
+                <li th:utext="|<strong>Descripcion:</strong> ${factura.descripcion}|" class="list-group-item"></li>
+                <li th:utext="|<strong>Fecha:</strong> ${factura.createAt}|" class="list-group-item"></li>
+                <!--agregar items aca-->
+            </ul>
+        </div>
+    </div>
+</div>
+<footer th:replace="layout/layout :: footer"></footer>
+</body>
+</html>
