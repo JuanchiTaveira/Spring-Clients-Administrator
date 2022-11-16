@@ -4,7 +4,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,6 +21,8 @@ public class Factura implements Serializable {
     @NotEmpty
     private String descripcion;
 
+    @Column(length = 500)
+    @Size(max = 500)
     private String observacion;
 
     @Temporal(TemporalType.DATE)

@@ -9,7 +9,7 @@
 
     <div class="card bg-light">
         <div class="card-header" th:text="${titulo}"></div>
-        <div class="card-body">
+        <div class="card-body pb-0">
 
             <h4 class="card-title">
                 <a th:href="@{/ver/} + ${factura.cliente.id}" th:text="'&laquo; volver'"
@@ -63,7 +63,7 @@
 
                 <div class="form-group row">
                     <div class="col-sm-6">
-                        <input type="submit" th:value="${titulo}" class="btn btn-secondary">
+                        <input type="submit" th:value="${titulo}" class="btn btn-primary my-4">
                     </div>
                 </div>
             </form>

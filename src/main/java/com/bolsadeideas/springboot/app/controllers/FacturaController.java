@@ -101,7 +101,7 @@ public class FacturaController {
         }
 
         model.addAttribute("factura", factura);
-        model.addAttribute("titulo", "Factura: " + factura.getDescripcion());
+        model.addAttribute("titulo", "<strong>Factura:</strong> " + factura.getDescripcion());
 
         return "factura/ver";
     }
