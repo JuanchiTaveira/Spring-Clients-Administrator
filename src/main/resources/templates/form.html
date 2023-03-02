@@ -38,7 +38,7 @@
 					<div class="form-group row">
 						<label class="col-sm-2 col-form-label">Email</label>
 						<div class="col-sm-6">
-							<input type="text" th:field="*{email}" class="form-control"
+							<input type="email" th:field="*{email}" class="form-control"
 								th:errorclass="'form-control alert-danger'" /> <small
 								class="form-text text-danger"
 								th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></small>
